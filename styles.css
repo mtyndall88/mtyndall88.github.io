@@ -3,10 +3,10 @@ styles.css
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root{
+    --topbar-reserved: 140px;
     --brand: #2FCC23;
     --hero-img: url("assets/Me at Taft Point.jpg");
     --icon-size: 28px;
-    --topbar-height: 92px;
     --topbar-bg: rgba(30,33,37,0.92);
 }
 
@@ -29,12 +29,27 @@ body{
     transition: background .25s ease, box-shadow .25s ease;
     will-change: background;
 }
+/* Topbar fully hidden */
+.topbar.is-hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+/* (optional) also animate the greeting when bar hides */
+.topbar.is-hidden .greeting {
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+}
+
 .topbar.scrolled{
     background: var(--topbar-bg);
     box-shadow: 0 6px 20px rgba(0,0,0,.18);
     backdrop-filter: saturate(1.1) blur(6px);
 }
-/* Make active link blue in BOTH transparent and scrolled states */
+/* Make active link green in BOTH transparent and scrolled states */
 .nav-links a.active { color: var(--brand); }                 /* default (transparent topbar) */
 .topbar.scrolled .nav-links a.active { color: var(--brand); } /* when topbar is dark */
 
@@ -90,7 +105,7 @@ body{
     background: #0b1b2a center/cover no-repeat;
     background-image: var(--hero-img);
     color: #fff;
-    padding-top: calc(var(--topbar-height) + 40px); /* make room for fixed overlay */
+    padding-top: calc(var(--topbar-reserved) + 16px);
     padding-bottom: 90px;
     text-align: center;
 }
@@ -98,7 +113,9 @@ body{
     position: absolute; inset: 0;
     background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55));
 }
-.hero__content{ position: relative; z-index: 1; }
+.hero__content{
+    position: relative; z-index: 1;
+}
 .header h1{ font-size: 3rem; font-weight: 300; margin-bottom: 18px; }
 .tagline{ font-size: 1.15rem; color:#e6eef6; max-width: 720px; margin: 0 auto; line-height: 1.85; }
 
@@ -118,7 +135,7 @@ body{
 .social__link:hover .icon{ fill: var(--brand); }
 
 /* Anchor offset for in-page links (so headings aren’t hidden under topbar) */
-.section, .contact{ scroll-margin-top: calc(var(--topbar-height) + 12px); }
+.section, .contact{ scroll-margin-top: calc(var(--topbar-reserved) + 12px); }
 
 /* ===== Sections ===== */
 .section{ padding: 64px 0; border-bottom: 1px solid #e9ecef; background:#fff; }
@@ -371,7 +388,6 @@ body{
 
 /* ===== Responsive tweaks ===== */
 @media (max-width: 768px){
-    :root{ --topbar-height: 98px; } /* increases if greeting wraps lines */
     .header h1{ font-size: 2.3rem; }
     .nav-links{ gap: 18px; }
     .container{ padding: 0 16px; }

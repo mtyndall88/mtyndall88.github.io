@@ -8,6 +8,9 @@
     <!-- Load stylesheet and JS -->
     <link rel="stylesheet" href="styles.css" />
     <script src="index.js" defer></script>
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
 <!-- Fixed overlay: NAV + Greeting (two stacked rows) -->
@@ -213,19 +216,19 @@
         <h2 class="section-title">Projects</h2>
 
         <div class="projects-grid projects-grid--gallery">
-            <!-- Project 1 -->
+            <!-- Project 1: Personal Website -->
             <article class="project-card project" data-project='{
         "title":"Personal Portfolio Website",
-        "img":"assets/projects/portfolio-hero.jpg",
+        "img":"assets/projects/Personal-Site-Hero.jpg",
         "stack":["HTML","CSS","JavaScript"],
-        "desc":"Responsive portfolio with overlay topbar, scroll-spy, and circular photo carousel.",
+        "desc":"I created a responsive personal portfolio with overlay topbar, scroll-spy, and circular photo carousel. I got the idea for this website from the Ceevee template by StyleShout.",
         "links":[
-          {"label":"GitHub","href":"https://github.com/yourhandle/portfolio"},
+          {"label":"GitHub","href":"https://github.com/mtyndall88/mtyndall88.github.io"},
           {"label":"Live Demo","href":"https://yourdomain.com"}
         ]
       }'>
                 <button class="project-thumb" aria-label="Open: Personal Portfolio Website">
-                    <img src="assets/projects/portfolio-thumb.jpg" alt="Personal Portfolio Website thumbnail">
+                    <img src="assets/projects/Personal-Site-Thumb.jpg" alt="Personal Portfolio Website thumbnail">
                     <span class="project-thumb__overlay">
             <span class="project-thumb__title">Personal Portfolio Website</span>
           </span>
@@ -234,23 +237,23 @@
 
             <!-- Project 2 -->
             <article class="project-card project" data-project='{
-        "title":"Task Tracker",
-        "img":"assets/projects/tasktracker-hero.jpg",
-        "stack":["React","Node","MongoDB"],
-        "desc":"Full-stack CRUD app with JWT auth and optimistic UI updates.",
+        "title":"ReferralOnly HVAC Inventory",
+        "img":"assets/projects/HVAC-Hero.jpg",
+        "stack":["Java","MySQL","Git"],
+        "desc":"Inventory Management System for small HVAC teams using a Java front-end and MySQL back-end.",
         "links":[
-          {"label":"GitHub","href":"https://github.com/yourhandle/task-tracker"},
+          {"label":"GitHub","href":"https://github.com/mtyndall88/ReferralOnlyHVAC-InventoryControl"},
           {"label":"Live Demo","href":"https://task-tracker.example.com"}
         ]}'>
-                <button class="project-thumb" aria-label="Open: Task Tracker">
-                    <img src="assets/projects/tasktracker-thumb.jpg" alt="Task Tracker thumbnail">
+                <button class="project-thumb" aria-label="Open: ReferralOnly HVAC Inventory">
+                    <img src="assets/projects/HVAC-Thumb.jpg" alt="HVAC Inventory thumbnail">
                     <span class="project-thumb__overlay">
-            <span class="project-thumb__title">Task Tracker</span>
+            <span class="project-thumb__title">ReferralOnly HVAC Inventory</span>
           </span>
                 </button>
             </article>
 
-            <!-- Project 3 -->
+            <!-- Project 3
             <article class="project-card project" data-project='{
         "title":"Data Viz Dashboard",
         "img":"assets/projects/dataviz-hero.jpg",
@@ -265,7 +268,7 @@
             <span class="project-thumb__title">Data Viz Dashboard</span>
           </span>
                 </button>
-            </article>
+            </article> -->
         </div>
     </div>
 </section>
