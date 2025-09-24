@@ -6,13 +6,14 @@ styles.css
     --topbar-reserved: 140px;
     --brand: #2FCC23;
     --hero-img: url("assets/Me at Taft Point.jpg");
-    --icon-size: 28px;
-    --topbar-bg: rgba(30,33,37,0.92);
+    --icon-size: 50px;
+    --topbar-bg: rgba(18,18,20,0.70);
 }
 
 html { scroll-behavior: smooth; }
 
 body{
+    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #333;
@@ -25,7 +26,8 @@ body{
 .topbar{
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 200;
-    background: transparent;        /* transparent over hero at top */
+    background: var(--topbar-bg); /* Remove this, if transparent background is used. */
+    /* background: transparent;         Optional: transparent over hero at top */
     transition: background .25s ease, box-shadow .25s ease;
     will-change: background;
 }
@@ -37,7 +39,7 @@ body{
     transition: opacity .25s ease, transform .25s ease, background .25s ease, box-shadow .25s ease;
 }
 
-/* (optional) also animate the greeting when bar hides */
+/* Animate the greeting when bar hides */
 .topbar.is-hidden .greeting {
     opacity: 0;
     transform: translateY(-6px);
@@ -50,14 +52,14 @@ body{
     backdrop-filter: saturate(1.1) blur(6px);
 }
 /* Make active link green in BOTH transparent and scrolled states */
-.nav-links a.active { color: var(--brand); }                 /* default (transparent topbar) */
+.nav-links a.active { color: var(--brand); }
 .topbar.scrolled .nav-links a.active { color: var(--brand); } /* when topbar is dark */
 
-/* Optional: keep hover behavior consistent for active link */
-.nav-links a.active:hover { color: var(--brand); }
+/* Keep hover behavior consistent for active link */
+.nav-links a.active:hover { color: #e5e7eb }
 
 /* ===== Nav (overlay mode) ===== */
-.nav{ position: static; } /* neutralize any old sticky */
+.nav{ position: static; }
 .nav.nav--overlay{
     background: transparent;
     border-bottom: 0;
@@ -67,15 +69,16 @@ body{
     display:flex; justify-content:center; align-items:center; list-style:none; gap:32px; flex-wrap:wrap;
 }
 .nav-links a{
-    color:#fff; text-decoration:none; font-weight:700; transition: color .2s ease;
+    color:#888888; text-decoration:none; font-weight:700; transition: color .2s ease;
 }
 /* Active section link styling */
 .nav-links a.active {
     color: var(--brand);
-    text-decoration: underline; /* optional; remove if you prefer only color */
+    /* text-decoration: underline;  Optional */
 }
-.topbar.scrolled .nav-links a{ color:#e5e7eb; }
-.nav-links a:hover{ color: var(--brand); }
+.topbar.scrolled .nav-links a{ color:#888888; }
+.nav-links a:hover{ color: #e5e7eb; }
+.topbar.scrolled .nav-links a:hover { color: #e5e7eb; }
 
 /* Greeting line */
 .greeting{
@@ -94,8 +97,8 @@ body{
     font-weight: 700;
 }
 .email-link:hover{
-    color: #000;
-    text-decoration: underline;
+    color: #eef3f8;
+    /* Optional: text-decoration: underline; */
 }
 
 /* ===== HERO (image starts at very top) ===== */
@@ -111,13 +114,22 @@ body{
 }
 .header__overlay{
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55));
+    background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.35));
 }
 .hero__content{
     position: relative; z-index: 1;
 }
-.header h1{ font-size: 3rem; font-weight: 300; margin-bottom: 18px; }
-.tagline{ font-size: 1.15rem; color:#e6eef6; max-width: 720px; margin: 0 auto; line-height: 1.85; }
+.header h1{
+    font-size: 8rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.tagline{ font-size: 1.3rem;
+    color:#e6eef6;
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.85;
+}
 
 /* Social icons */
 .social{
@@ -126,7 +138,7 @@ body{
 }
 .social__link{
     display:inline-flex; align-items:center; justify-content:center;
-    width:46px; height:46px; border-radius:50%;
+    width:80px; height:80px; border-radius:50%;
     background: rgba(255,255,255,.12);
     transition: transform .2s ease, background .2s ease;
 }
@@ -145,7 +157,7 @@ body{
 }
 .intro{ font-size: 1.06rem; line-height: 1.85; color:#555; margin-bottom: 24px; }
 
-/* ===== Dark About ===== */
+/* ===== Dark About & Projects===== */
 .section--dark{ background:#0f1114; color:#e8eaed; border-bottom-color:#1b1f24; }
 .section--dark .section-title{ color:#fff; }
 .section--dark .intro{ color:#c9d1d9; }
@@ -189,8 +201,8 @@ body{
 
 /* Skills grid in About */
 .skills-grid{
-    display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 28px; margin: 24px 0 0;
+    display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px; margin: 24px 0 0;
 }
 .skill-card{
     background:#f8f9fa; padding: 26px; border-radius: 10px; border-left:4px solid var(--brand);
@@ -201,7 +213,7 @@ body{
 .skill-card p{ color:#666; }
 .section--dark .skill-card p{ color:#c9d1d9; }
 
-/* ===== Experience / Education items ===== */
+/* ===== Work Experience / Education items ===== */
 .experience-item{ margin-bottom: 46px; position: relative; padding-left: 30px; }
 .experience-item::before{
     content:''; position:absolute; left:0; top:5px; width:12px; height:12px; background: var(--brand); border-radius:50%;
@@ -221,7 +233,8 @@ body{
     gap: 32px; margin-top: 20px;
 }
 .project-card{
-    background:#fff; border:1px solid #e9ecef; border-radius:10px; padding: 24px;
+    background:#15181c;
+    /* Optional Border: border:1px solid #e9ecef; border-radius:10px; padding: 0px; */
     transition: transform .2s ease, box-shadow .2s ease;
 }
 .project-card:hover{ transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,.1); }
@@ -258,7 +271,7 @@ body{
 
 .project-thumb__overlay {
     position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.05));
+    background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0));
     display: flex; align-items: flex-end; justify-content: center;
     padding: 14px;
     transition: background .25s ease;
@@ -344,14 +357,47 @@ body{
     .project-modal__media { max-height: 56vh; }
 }
 
-/* ===== Activities ===== */
-.activity-item{
-    margin-bottom: 28px; padding: 22px; background:#f8f9fa; border-radius: 10px; border-left: 4px solid var(--brand);
+/* ===== Hobbies and Interests ===== */
+/* Full-bleed helper: let this section ignore the standard max-width container */
+.section--fullbleed .container {
+    max-width: 1000px;           /* keep the heading/intro nicely centered */
+    padding: 0 20px;
 }
-.activity-header{ display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap: 8px; margin-bottom: 10px; }
-.activity-title{ font-size:1.1rem; font-weight:700; color:#2c3e50; }
-.activity-date{ color: var(--brand); font-weight:600; }
-.activity-description{ color:#555; line-height: 1.75; }
+.section--fullbleed {
+    padding: 64px 0 0;           /* top padding for heading/intro; gallery follows */
+    border-bottom: none;         /* optional: no divider line under this section */
+}
+
+/* Edge-to-edge 3-up gallery with zero borders/gaps */
+.hobby-gallery {
+    width: 100vw;                /* full viewport width */
+    margin-left: 50%;
+    transform: translateX(-50%); /* center it even if parent has margins */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;                      /* no gaps or borders */
+}
+
+.hobby-tile { margin: 0; }
+
+.hobby-tile img {
+    display: block;              /* block display no gaps */
+    width: 100%;
+    height: clamp(380px, 50vh, 620px); /* tall enough to feel immersive */
+    object-fit: cover;           /* crop to fill without distortion */
+    object-position: center;
+    border: 0;                   /* explicit: no borders */
+}
+
+/* Mobile: stack for readability */
+@media (max-width: 900px) {
+    .hobby-gallery {
+        grid-template-columns: 1fr;
+    }
+    .hobby-tile img {
+        height: clamp(240px, 50vh, 500px);
+    }
+}
 
 /* ===== Contact ===== */
 .contact{ background:#f8f9fa; }
@@ -370,10 +416,18 @@ body{
 .form-group textarea{ resize: vertical; min-height: 120px; }
 .submit-btn{
     background: var(--brand); color:#fff; padding: 12px 20px; border:none; border-radius: 8px; font-weight:700; width:100%;
-    transition: background .2s ease, transform .05s ease;
+    transition: background .2s ease, transform .05s ease; cursor: pointer;
 }
 .submit-btn:hover{ background:#333; }
 .submit-btn:active{ transform: scale(.99); }
+
+.hp {
+    position: absolute !important;
+    left: -9999px !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+}
 
 /* ===== Footer ===== */
 .footer{ text-align:center; padding: 40px 0; color:#666; font-size:.95rem; }

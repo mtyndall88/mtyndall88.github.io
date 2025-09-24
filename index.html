@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Mark Tyndall</title>
 
-    <!-- Load stylesheet and JS -->
-    <link rel="stylesheet" href="styles.css" />
-    <script src="index.js" defer></script>
+    <!-- Stylesheet and JS -->
+    <link rel="stylesheet" href="styles.css?v=20250922">
+    <script src="index.js?v=20250922" defer></script>
 
     <!-- Standard favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -23,7 +23,7 @@
                 <li><a href="#experience">Work</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#activities">Activities</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -56,12 +56,12 @@
                 <!-- LinkedIn SVG -->
                 <svg viewBox="0 0 24 24" class="icon"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.67H9.37V9h3.4v1.56h.05c.47-.88 1.62-1.8 3.33-1.8 3.56 0 4.22 2.34 4.22 5.38v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.57V9h3.54v11.45z"/></svg>
             </a>
-            <a class="social__link" href="assets/MTyndall_Resume.pdf" target="_blank" aria-label="Resume" rel="noopener">
+            <a class="social__link" href="assets/Mark Tyndall_Resume_09232025.pdf" target="_blank" aria-label="Resume" rel="noopener">
                 <!-- File/Resume SVG -->
                 <svg viewBox="0 0 24 24" class="icon"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
             </a>
             <a class="social__link" href="mailto:tyndall5818@gmail.com" aria-label="Email">
-                <!-- Mail SVG -->
+                <!-- E-Mail SVG -->
                 <svg viewBox="0 0 24 24" class="icon"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2l8 5 8-5"/></svg>
             </a>
         </nav>
@@ -75,8 +75,13 @@
 
         <div class="about__grid">
             <div class="intro">
-                I’m a veteran and CS student focused on building reliable, secure software. My strengths are full-stack development,
-                data-driven features, and turning vague problems into shippable, maintainable code.
+                I’m a Marine Corps veteran and CS student who builds reliable, secure software. I spent nine years in
+                the Marines, five as a machine gunner and four as an imagery analyst. I also supported DoD intelligence
+                teams with integrating AI/ML and UX into Air Force full-motion video (FMV) operations to help analysts
+                make faster, better decisions. I’m based in Southwest Florida, a husband, and father of two. I’m looking
+                for meaningful, remote-friendly work where I can deliver value without losing what matters most at home.
+                <br>
+                <br>
                 Below are highlights of my technical skills:
             </div>
 
@@ -92,7 +97,7 @@
             </div>
         </div>
 
-        <!-- Skills cards -->
+        <!-- Skill cards -->
         <div class="skills-grid">
             <div class="skill-card">
                 <h3>Programming Languages</h3>
@@ -100,15 +105,15 @@
             </div>
             <div class="skill-card">
                 <h3>Frameworks & Libraries</h3>
-                <p>React, Node.js, Express, Flask, Spring Boot, jQuery</p>
+                <p>Spring Boot</p>
             </div>
             <div class="skill-card">
                 <h3>Tools & Technologies</h3>
-                <p>Git, Docker, AWS, Linux, VS Code, IntelliJ IDEA</p>
+                <p>Git, Eclipse, Webstorm, PyCharm, Atom, Formspree</p>
             </div>
             <div class="skill-card">
                 <h3>Databases & Systems</h3>
-                <p>MySQL, PostgreSQL, MongoDB, RESTful APIs</p>
+                <p>MySQL, MongoDB</p>
             </div>
         </div>
     </div>
@@ -119,7 +124,6 @@
     <div class="container">
         <h2 class="section-title">Work Experience</h2>
 
-        <!-- keep only roles/jobs here -->
         <div class="experience-item fade-in">
             <div class="experience-date">January, 2023 - Present</div>
             <div class="experience-title">Sales Associate</div>
@@ -191,7 +195,7 @@
             <div class="experience-date">March, 2025 - Expected Graduation September, 2026</div>
             <div class="experience-title">Bachelor of Science, Computer Science</div>
             <div class="experience-company">Rasmussen University</div>
-            <div class="experience-description">GPA: 3.5.</div>
+            <div class="experience-description">GPA: 4.0.</div>
         </div>
 
         <div class="experience-item fade-in">
@@ -211,7 +215,7 @@
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="section">
+<section id="projects" class="section section--dark">
     <div class="container">
         <h2 class="section-title">Projects</h2>
 
@@ -223,10 +227,9 @@
         "stack":["HTML","CSS","JavaScript"],
         "desc":"I created a responsive personal portfolio with overlay topbar, scroll-spy, and circular photo carousel. I got the idea for this website from the Ceevee template by StyleShout.",
         "links":[
-          {"label":"GitHub","href":"https://github.com/mtyndall88/mtyndall88.github.io"},
-          {"label":"Live Demo","href":"https://yourdomain.com"}
-        ]
-      }'>
+          {"label":"GitHub","href":"https://github.com/mtyndall88/mtyndall88.github.io"}
+        ]}'>
+                <!-- Optional Live Demo Link: {"label":"Live Demo","href":"https://yourdomain.com"} -->
                 <button class="project-thumb" aria-label="Open: Personal Portfolio Website">
                     <img src="assets/projects/Personal-Site-Thumb.jpg" alt="Personal Portfolio Website thumbnail">
                     <span class="project-thumb__overlay">
@@ -235,45 +238,29 @@
                 </button>
             </article>
 
-            <!-- Project 2 -->
+            <!-- Project 2 Inventory Management System -->
             <article class="project-card project" data-project='{
-        "title":"ReferralOnly HVAC Inventory",
+        "title":"Inventory Management System",
         "img":"assets/projects/HVAC-Hero.jpg",
         "stack":["Java","MySQL","Git"],
-        "desc":"Inventory Management System for small HVAC teams using a Java front-end and MySQL back-end.",
+        "desc":"I created a console based Inventory Management System for small HVAC teams with a Java front-end and MySQL back-end for my Advanced Java Programming class project.",
         "links":[
-          {"label":"GitHub","href":"https://github.com/mtyndall88/ReferralOnlyHVAC-InventoryControl"},
-          {"label":"Live Demo","href":"https://task-tracker.example.com"}
+          {"label":"GitHub","href":"https://github.com/mtyndall88/ReferralOnlyHVAC-InventoryControl"}
         ]}'>
-                <button class="project-thumb" aria-label="Open: ReferralOnly HVAC Inventory">
+                <!-- Optional Live Demo Link {"label":"Live Demo","href":"https://data-project.example.com"} -->
+
+                <button class="project-thumb" aria-label="Open: Inventory Management System">
                     <img src="assets/projects/HVAC-Thumb.jpg" alt="HVAC Inventory thumbnail">
                     <span class="project-thumb__overlay">
-            <span class="project-thumb__title">ReferralOnly HVAC Inventory</span>
+            <span class="project-thumb__title">Inventory Management System</span>
           </span>
                 </button>
             </article>
-
-            <!-- Project 3
-            <article class="project-card project" data-project='{
-        "title":"Data Viz Dashboard",
-        "img":"assets/projects/dataviz-hero.jpg",
-        "stack":["Python","Pandas","Plotly"],
-        "desc":"Interactive dashboard showing KPIs and trends with exportable charts.",
-        "links":[
-          {"label":"GitHub","href":"https://github.com/yourhandle/data-viz-dashboard"}
-        ]}'>
-                <button class="project-thumb" aria-label="Open: Data Viz Dashboard">
-                    <img src="assets/projects/dataviz-thumb.jpg" alt="Data Viz Dashboard thumbnail">
-                    <span class="project-thumb__overlay">
-            <span class="project-thumb__title">Data Viz Dashboard</span>
-          </span>
-                </button>
-            </article> -->
         </div>
     </div>
 </section>
 
-<!-- Modal (one, reused for all projects) -->
+<!-- Modal (reused for all projects) -->
 <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="project-modal__backdrop" data-close></div>
     <div class="project-modal__dialog" role="document">
@@ -291,26 +278,26 @@
 </div>
 
 
-<!-- Activities Section -->
-<section id="activities" class="section">
+<!-- Hobbies and Interests Section -->
+<section id="hobbies" class="section section--fullbleed">
     <div class="container">
-        <h2 class="section-title">Activities & Leadership</h2>
-        <div class="intro">Summary of my leadership & extracurricular activities</div>
-
-        <div class="activity-item fade-in">
-            <div class="activity-header">
-                <div class="activity-title">[Student Organization Name]</div>
-                <div class="activity-date">[Month Year] - Present</div>
-            </div>
-            <div class="activity-description">
-                • Organized executive board meetings and managed club operations<br>
-                • Designed promotional materials for events and activities<br>
-                • Recruited new members and facilitated networking opportunities<br>
-                • Coordinated with university administration for event planning
-            </div>
-        </div>
-
-        <!-- ...other activity items... -->
+        <h2 class="section-title">Hobbies & Interests</h2>
+        <p class="intro">When I am not coding, I love spending time with my family or outdoors. I enjoy
+            unhurried time with my girls, getting out on the water to boat and fish along the SWFL coast, and exploring
+            new places—nearby or far-off destinations. These moments away from the screen keep me grounded and curious,
+            and that curiosity inspires how I approach my projects.</p>
+    </div>
+    <!-- Full-bleed gallery lives OUTSIDE the container to span edge-to-edge -->
+    <div class="hobby-gallery">
+        <figure class="hobby-tile">
+            <img src="assets/hobbies/Fishing Sunrise.jpeg" alt="Boating and Fishing" loading="lazy">
+        </figure>
+        <figure class="hobby-tile">
+            <img src="assets/hobbies/Family in Montana.jpeg" alt="My Family" loading="lazy">
+        </figure>
+        <figure class="hobby-tile">
+            <img src="assets/hobbies/Me_Brookings.jpg" alt="Exploring and Traveling" loading="lazy">
+        </figure>
     </div>
 </section>
 
@@ -318,9 +305,9 @@
 <section id="contact" class="contact">
     <div class="container">
         <h2 class="section-title">Contact</h2>
-        <p class="contact-intro">Let me get to know more about you.</p>
+        <p class="contact-intro">For employment inquiries or prospective projects, please contact me to discuss how I can help.</p>
 
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mzzjbnrd" method="POST" data-captcha="true">
             <div class="form-row">
                 <div class="form-group">
                     <label for="firstName">First Name *</label>
@@ -347,6 +334,13 @@
                 <textarea id="message" name="message" required placeholder="Tell me about yourself and how I can help you..."></textarea>
             </div>
 
+            <!-- Honeypot to reduce spam -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <!-- Custom subject seen in the email you receive -->
+            <input type="hidden" name="_subject" value="New message from portfolio contact form" />
+            <input type="hidden" name="_website" value="mtyndall88.github.io">
+
             <button type="submit" class="submit-btn">Send Message</button>
         </form>
     </div>
@@ -356,8 +350,7 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-contact">
-            <p>1523 NW 38th PL</p>
-            <p>Cape Coral, FL 33993</p>
+            <p>Cape Coral, FL</p>
             <p><a href="mailto:tyndall5818@gmail.com">tyndall5818@gmail.com</a></p>
             <p><a href="tel:+12392333349">+1 (239) 233-3349</a></p>
         </div>

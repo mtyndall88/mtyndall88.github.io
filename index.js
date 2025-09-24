@@ -1,6 +1,5 @@
 /* ===================================================================
- * Custom merged JS
- * For Mark Tyndall Portfolio
+ * Custom merged JS from Ceevee Template for My Portfolio
  * ------------------------------------------------------------------- */
 
 /* ===== Topbar controller: hide over hero text, show after; dark after hero ===== */
@@ -251,15 +250,35 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     });
 })();
 
-/* ===== Contact form demo (no backend) ===== */
+/* ===== Contact form  ===== */
 (function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
-    form.addEventListener('submit', (e) => {
+
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const data = Object.fromEntries(new FormData(form).entries());
-        console.log('Contact form submitted:', data);
-        alert('Thanks! Your message has been captured locally. Wire this up to a backend/service to send.');
-        form.reset();
+
+        const endpoint = form.getAttribute('action'); // Formspree endpoint
+        const data = new FormData(form);
+
+        try {
+            const res = await fetch(endpoint, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }  // get JSON back
+            });
+
+            if (res.ok) {
+                alert('Thanks! Your message has been sent.');
+                form.reset();
+            } else {
+                const err = await res.json().catch(() => ({}));
+                console.error('Formspree error:', err);
+                alert('Sorry—there was a problem sending your message. Please try again.');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Network error. Please check your connection and try again.');
+        }
     });
 })();
