@@ -1,16 +1,61 @@
 /* ===================================================================
- * Custom merged JS from Ceevee Template for My Portfolio
- * ------------------------------------------------------------------- */
+ * Custom Site JS - Mark Tyndall ideas from Ceevee Template
+ * I kept things minimal but reliable.
+ * FEATURES:
+ * - Topbar show/hide + "after hero" styling.
+ * - Scroll spy with smooth anchor scrolling
+ * - Fade-in on scroll
+ * - About carousel
+ * - Project modal
+ * - Contact form submit (Formspree)
+ * - Mobile fixes (no sticky hover, stable nav)
+ * - Greeting dismiss, Scroll-down & Back-to-top
+ * =================================================================== */
+
+/* ===== First-load intro: mount topbar, then reveal hero text & socials ===== */
+(function initIntroMount(){
+    const topbar = document.getElementById('topbar');
+    const h1 = document.querySelector('.hero__content h1.reveal-up');
+    const tagline = document.querySelector('.hero__content .tagline.reveal-up');
+    const socials = document.querySelectorAll('.social .reveal-up');
+
+    // Timings
+    const TOPBAR_DELAY = 120;   // slide topbar
+    const HERO_DELAY   = 900;   // reveal hero text
+    const SOCIAL_DELAY = 1400;  // socials start (same time)
+
+    const onLoad = () => {
+        if (topbar) {
+            setTimeout(() => {
+                topbar.classList.add('is-mounted');
+                topbar.classList.remove('is-hidden');
+            }, TOPBAR_DELAY);
+        }
+
+        setTimeout(() => {
+            h1?.classList.add('is-in');
+            tagline?.classList.add('is-in');
+        }, HERO_DELAY);
+
+        // Reveal ALL social icons at once
+        setTimeout(() => {
+            socials.forEach(icon => icon.classList.add('is-in'));
+        }, SOCIAL_DELAY);
+    };
+
+    if (document.readyState === 'complete') onLoad();
+    else window.addEventListener('load', onLoad);
+})();
 
 /* ===== Topbar controller: hide over hero text, show after; dark after hero ===== */
 (function initTopbarController(){
     const topbar = document.getElementById('topbar');
-    const hero   = document.getElementById('home');                 // full hero section
-    const heroContent = document.querySelector('.hero__content');    // name/tagline/icons wrapper
+    const hero   = document.getElementById('home'); // full hero section
+    const heroContent = document.querySelector('.hero__content'); // name/tagline/icons wrapper
     if (!topbar || !hero || !heroContent) return;
 
-    let heroBottom = 0;          // absolute Y where hero ends
-    let contentBottomAbs = 0;    // absolute Y where hero text ends
+    let heroBottom = 0; // absolute Y where hero ends
+    let contentBottomAbs = 0; // absolute Y where hero text ends
     let ticking = false;
 
     const measure = () => {
@@ -32,8 +77,11 @@
         if (scrollY <= 2) {
             topbar.classList.remove('is-hidden');
         } else {
+            // delay auto-hide right after a nav click
+            const ts = Number(document.documentElement.dataset.navClickTs || 0);
+            const suppressHide = ts && (Date.now() - ts < 700); // ~0.7s window
             const overlappingHeroText = (scrollY + topbarH) < (contentBottomAbs + 50);
-            topbar.classList.toggle('is-hidden', overlappingHeroText);
+            topbar.classList.toggle('is-hidden', !suppressHide && overlappingHeroText);
         }
 
         // 2) Transparent while within hero, dark after hero
@@ -60,6 +108,51 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onResize);
     window.addEventListener('load', onResize);
+})();
+
+/* ===== Greeting close ===== */
+(function initGreetingClose(){
+    const bar = document.getElementById('greeting');
+    const btn = document.getElementById('greetingClose');
+    if (!bar || !btn) return;
+
+    const KEY = 'mt_greeting_dismissed';
+
+    // If this page load is a *reload*, clear the flag so the banner returns
+    try {
+        const nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+        const isReload = nav ? nav.type === 'reload'
+            : (performance.navigation && performance.navigation.type === 1); // Safari fallback
+        if (isReload) sessionStorage.removeItem(KEY);
+    } catch(_) {}
+
+    if (sessionStorage.getItem(KEY) === '1') {
+        bar.style.display = 'none';
+        return;
+    }
+
+    btn.addEventListener('click', () => {
+        bar.style.display = 'none';
+        sessionStorage.setItem(KEY, '1');
+    });
+})();
+
+/* ===== Back to top ===== */
+(function initBackToTop(){
+    const btn = document.getElementById('backToTop');
+    if (!btn) return;
+
+    const toggle = () => {
+        const show = window.scrollY > (window.innerHeight * 0.6);
+        btn.classList.toggle('is-visible', show);
+    };
+    window.addEventListener('scroll', toggle, { passive: true });
+    window.addEventListener('resize', toggle);
+    toggle();
+
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 })();
 
 /* ===== Scroll-spy (active nav link) ===== */
@@ -111,12 +204,34 @@
             setActive(id);
 
             const top = target.offsetTop - getOffset();
+            // keep topbar stable during user navigation
+            document.documentElement.dataset.navClickTs = Date.now().toString();
             window.scrollTo({ top, behavior: 'smooth' });
+            // drop focus to avoid sticky :focus highlight on mobile
+            a.blur();
             history.pushState(null, '', `#${id}`);
         });
     });
 
     updateByScroll();
+})();
+
+/* ===== Scroll-down button click ===== */
+(function initScrollDown(){
+    const btn = document.querySelector('.scroll-down');
+    const target = document.getElementById('about'); // the section you want to hit
+    const topbar = document.getElementById('topbar');
+
+    if (!btn || !target) return;
+
+    const getOffset = () => (topbar ? topbar.getBoundingClientRect().height : 0);
+
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const top = target.offsetTop - getOffset();
+        window.scrollTo({ top, behavior: 'smooth' });
+        history.pushState(null, '', '#about'); // optional: update URL like nav click
+    });
 })();
 
 /* ===== Reveal on scroll (fade-in) ===== */

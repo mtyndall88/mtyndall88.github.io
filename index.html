@@ -29,10 +29,12 @@
         </div>
     </nav>
 
-    <div class="greeting">
+    <div class="greeting" id="greeting">
         Hello, thank you for visiting my Website! I am currently seeking internship opportunities in software development.
         If you think I'm a good fit, please send me an
         <a class="email-link" href="mailto:tyndall5818@gmail.com">email</a>.
+        </span>
+        <button class="greeting__close" id="greetingClose" aria-label="Close greeting" title="Close greeting">x</button>
     </div>
 </div>
 
@@ -40,32 +42,40 @@
 <header id="home" class="header hero">
     <div class="header__overlay"></div>
     <div class="container hero__content">
-        <h1>Mark Tyndall</h1>
-        <p class="tagline">
+        <h1 class="reveal-up">Mark Tyndall</h1>
+        <p class="tagline reveal-up">
             U.S. Marine Corps Veteran | DoD TS/SCI Security Clearance | CS Student<br>
             Background Image: Glacier Point, Yosemite National Park by Mark Tyndall
         </p>
 
         <!-- Social icons -->
         <nav class="social">
-            <a class="social__link" href="https://github.com/mtyndall88" target="_blank" aria-label="GitHub" rel="noopener">
+            <a class="social__link reveal-up" href="https://github.com/mtyndall88" target="_blank" aria-label="GitHub" rel="noopener">
                 <!-- GitHub SVG -->
                 <svg viewBox="0 0 24 24" class="icon"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.55v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.53-1.36-1.3-1.72-1.3-1.72-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.22 1.79 1.22 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.2-3.07-.12-.29-.52-1.45.12-3.03 0 0 .98-.31 3.2 1.17a11.04 11.04 0 0 1 5.82 0c2.22-1.48 3.2-1.17 3.2-1.17.64 1.58.24 2.74.12 3.03.75.8 1.2 1.82 1.2 3.07 0 4.41-2.69 5.38-5.25 5.67.42.36.8 1.07.8 2.16v3.2c0 .31.2.67.8.55A11.5 11.5 0 0 0 12 .5z"/></svg>
             </a>
-            <a class="social__link" href="https://www.linkedin.com/in/mark-tyndall/" target="_blank" aria-label="LinkedIn" rel="noopener">
+            <a class="social__link reveal-up" href="https://www.linkedin.com/in/mark-tyndall/" target="_blank" aria-label="LinkedIn" rel="noopener">
                 <!-- LinkedIn SVG -->
                 <svg viewBox="0 0 24 24" class="icon"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.67H9.37V9h3.4v1.56h.05c.47-.88 1.62-1.8 3.33-1.8 3.56 0 4.22 2.34 4.22 5.38v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.57V9h3.54v11.45z"/></svg>
             </a>
-            <a class="social__link" href="assets/Mark Tyndall_Resume_09232025.pdf" target="_blank" aria-label="Resume" rel="noopener">
+            <a class="social__link reveal-up" href="assets/Mark Tyndall_Resume_09232025.pdf" target="_blank" aria-label="Resume" rel="noopener">
                 <!-- File/Resume SVG -->
                 <svg viewBox="0 0 24 24" class="icon"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
             </a>
-            <a class="social__link" href="mailto:tyndall5818@gmail.com" aria-label="Email">
+            <a class="social__link reveal-up" href="mailto:tyndall5818@gmail.com" aria-label="Email">
                 <!-- E-Mail SVG -->
                 <svg viewBox="0 0 24 24" class="icon"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2l8 5 8-5"/></svg>
             </a>
         </nav>
     </div>
+    <!-- Scroll down button -->
+    <a href="#about" class="scroll-down" aria-label="Scroll to About">
+        <span class="scroll-down__circle">
+            <span class="scroll-down__arrow" aria-hidden="true">↓</span>
+        </span>
+        <span class="scroll-down__text">Scroll down</span>
+    </a>
+
 </header>
 
 <!-- About Section -->
@@ -129,8 +139,10 @@
             <div class="experience-title">Sales Associate</div>
             <div class="experience-company">Rossman Realty</div>
             <div class="experience-description">
-                Prepared sales contracts and delivered final offers, closing statements, and deeds. Developed and
-                maintained relationships with clients throughout the entire sales process.
+                Prepared and executed purchase/sale contracts; delivered offers, counteroffers, closing statements, and
+                deeds in compliance with state and brokerage standards. Built and sustained client relationships
+                end-to-end—from discovery through post-close—coordinating with lenders, title, and attorneys to ensure
+                accurate, on-time closings.
             </div>
         </div>
 
@@ -139,14 +151,15 @@
             <div class="experience-title">Field Service Representative</div>
             <div class="experience-company">ECS Federal LLC.</div>
             <div class="experience-description">
-                Provided technical client support, management, testing, and strategic assessments of artificial
-                intelligence and machine learning technologies to support Air Force full motion video operations
-                and senior decision makers. This includes conducting background research in evaluating the feasibility
-                of and potential applications for new technological concepts, producing and presenting findings and
-                recommendations to a team of colleagues and clients at the Under Secretary of Defense for Intelligence
-                Algorithmic Warfare Cross-Functional Team. Assisted with technical program management and program
-                development, and drafted briefing materials overviewing government research and development efforts
-                for both technical and public audiences.
+                Provided client-facing technical leadership on AI/ML solutions supporting Air Force full-motion-video
+                (FMV) workflows and senior decision-makers. Led feasibility research, requirements discovery, testing,
+                and strategic assessments to translate mission needs into practical applications. Produced and presented
+                findings and recommendations to colleagues and clients within the DoD Algorithmic Warfare Cross-Functional
+                Team (Office of the Under Secretary of Defense for Intelligence & Security). Supported technical program
+                management and program development—roadmaps, risks/issues, test plans, and vendor coordination—and authored
+                executive briefings and technical summaries for both technical and public audiences. Recognized for
+                mission-focused leadership, stakeholder alignment, clear communication, analytical rigor, and disciplined
+                execution under tight timelines.
             </div>
         </div>
         <div class="experience-item fade-in">
@@ -154,33 +167,39 @@
             <div class="experience-title">Senior Consultant</div>
             <div class="experience-company">Booz Allen Hamilton</div>
             <div class="experience-description">
-                Conducted exploitation & analysis of Unmanned Aircraft System (UAS) full motion video (FMV) for
-                dissemination in support of CENTCOM operations for dissemination to higher echelons and supporting
-                units. Collaborated with the customer and aircrew on threat analysis and identification.
+                Led analysis of unmanned aircraft (UAS) full-motion video in support of U.S. combatant command
+                operations, producing real-time and post-mission intelligence for decision-makers. Coordinated with
+                mission customers and aircrews on threat detection and identification, set priorities under tight
+                timelines, and enforced quality standards for all products. Mentored junior analysts and streamlined
+                workflows to improve accuracy and speed. Known for calm, mission-focused leadership, clear communication,
+                analytical rigor, and sound judgment under pressure.
             </div>
         </div>
         <div class="experience-item fade-in">
             <div class="experience-date">March, 2013 - June, 2017</div>
-            <div class="experience-title">Sergeant</div>
+            <div class="experience-title">Imagery Analysis Specialist</div>
             <div class="experience-company">United States Marine Corps</div>
             <div class="experience-description">
-                Served as the FMV Intelligence Lead during multiple live fire exercises to prepare infantry units for
-                combat deployments. Performed multi-sensor imagery exploitation to produce tailored IMINT products.
-                Quality-checked imagery products before distribution and oversaw the professional development of imagery
-                intelligence Marines, ensuring that they were proficient in the required imagery interpretation and
-                analysis skills.
+                Led full-motion video (FMV) analysis during live-fire training events, supervising a team of imagery
+                analysts and coordinating with training and safety staff to deliver real-time, decision-ready visuals.
+                Managed multi-sensor imagery exploitation, set priorities under pressure, and enforced rigorous quality
+                standards. Trained and mentored junior analysts, improving accuracy, speed, and reporting discipline.
+                Recognized for mission-focused leadership, clear communication, sound risk judgment, adaptability, and
+                a strong work ethic.
             </div>
         </div>
 
         <div class="experience-item fade-in">
             <div class="experience-date">March, 2008 - March, 2013</div>
-            <div class="experience-title">Private - Corporal</div>
+            <div class="experience-title">Force Protection Specialist</div>
             <div class="experience-company">United States Marine Corps</div>
             <div class="experience-description">
-                Served as the Senior watch chief and Senior Watch NCO in RCT-8 Combat Operations Center. Supervised a
-                crew of 10 in daily high-stress military war zone operations, including the evaluation, discipline, and
-                cleanliness of our work environment. Assisted in security operations of nuclear weapons, submarines,
-                and facilities.
+                Senior operations lead for a 24/7 command center, supervising a 10-person team in high-pressure,
+                time-sensitive environments. Set priorities, coached and evaluated staff, managed schedules and
+                standards, and kept the workspace safe, clean, and mission-ready. Supported security operations for
+                critical national assets—including nuclear programs, submarines, and restricted facilities—while
+                adhering to strict compliance and confidentiality. Known for steady leadership, adaptability under
+                pressure, clear communication, strong work ethic, and a focus on safety, accountability, and results.
             </div>
         </div>
     </div>
@@ -192,21 +211,21 @@
         <h2 class="section-title">Education</h2>
 
         <div class="experience-item fade-in">
-            <div class="experience-date">March, 2025 - Expected Graduation September, 2026</div>
+            <div class="experience-date">March 2025 - Expected Graduation September 2026</div>
             <div class="experience-title">Bachelor of Science, Computer Science</div>
             <div class="experience-company">Rasmussen University</div>
             <div class="experience-description">GPA: 4.0.</div>
         </div>
 
         <div class="experience-item fade-in">
-            <div class="experience-date">January, 2019 - April, 2020</div>
-            <div class="experience-title">Bachelor of Art, Business Management</div>
+            <div class="experience-date">January 2019 - April 2020</div>
+            <div class="experience-title">Bachelor of Arts, Business Management</div>
             <div class="experience-company">Golden Gate University</div>
             <div class="experience-description">GPA: 3.2</div>
         </div>
 
         <div class="experience-item fade-in">
-            <div class="experience-date">March, 2012 - November, 2018</div>
+            <div class="experience-date">March 2012 - November 2018</div>
             <div class="experience-title">Associate of Arts, General Studies</div>
             <div class="experience-company">American Military University</div>
             <div class="experience-description">GPA: 3.6</div>
@@ -345,6 +364,11 @@
         </form>
     </div>
 </section>
+
+<!-- Back to top button -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <span class="back-to-top__arrow">↑</span>
+</button>
 
 <!-- Footer -->
 <footer class="footer">
