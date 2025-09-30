@@ -399,7 +399,7 @@ body{
 /* Circular carousel */
 .about-carousel{ display:flex; flex-direction:column; align-items:center; gap:10px; }
 .about-carousel__viewport{
-    position:relative; width: 220px; height:220px; border-radius:50%;
+    position:relative; width: 380px; height: 380px; border-radius: 50%;
     overflow:hidden; box-shadow: 0 10px 30px rgba(0,0,0,.35);
 }
 .about-carousel__img{
