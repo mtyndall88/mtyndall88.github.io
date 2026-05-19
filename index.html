@@ -1,253 +1,350 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mark Tyndall</title>
 
     <!-- Stylesheet and JS -->
-    <link rel="stylesheet" href="styles.css?v=20250922">
-    <script src="index.js?v=20250922" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=20250922" />
+    <script src="js/index.js?v=20250922" defer></script>
 
     <!-- Standard favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-</head>
-<body>
-<!-- Fixed overlay: NAV + Greeting (two stacked rows) -->
-<div class="topbar" id="topbar">
-    <nav class="nav nav--overlay">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <!-- Fixed overlay: NAV + Greeting (two stacked rows) -->
+    <div class="topbar" id="topbar">
+      <nav class="nav nav--overlay">
         <div class="container">
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Work</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Work</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-    </nav>
+      </nav>
 
-    <div class="greeting" id="greeting">
+      <div class="greeting" id="greeting">
         <span class="greeting__text">
-            Hello, thank you for visiting my Website! I am currently seeking internship opportunities in software
-            development. If you think I'm a good fit, please send me an
-            <a class="email-link" href="mailto:tyndall5818@gmail.com">email</a>.
+          Hello, thank you for visiting my Website! I am currently seeking
+          internship opportunities in software development. If you think I'm a
+          good fit, please send me an
+          <a class="email-link" href="mailto:tyndall5818@gmail.com">email</a>.
         </span>
-        <button class="greeting__close" id="greetingClose" aria-label="Close greeting" title="Close greeting">x</button>
+        <button
+          class="greeting__close"
+          id="greetingClose"
+          aria-label="Close greeting"
+          title="Close greeting"
+        >
+          x
+        </button>
+      </div>
     </div>
-</div>
 
-<!-- HERO  -->
-<header id="home" class="header hero">
-    <div class="header__overlay"></div>
-    <div class="container hero__content">
+    <!-- HERO  -->
+    <header id="home" class="header hero">
+      <div class="header__overlay"></div>
+      <div class="container hero__content">
         <h1 class="reveal-up">Mark Tyndall</h1>
         <p class="tagline reveal-up">
-            U.S. Marine Corps Veteran | DoD TS/SCI Security Clearance | CS Student<br>
-            Background Image: Glacier Point, Yosemite National Park by Mark Tyndall
+          U.S. Marine Corps Veteran | DoD TS/SCI Security Clearance | CS
+          Student<br />
+          Background Image: Glacier Point, Yosemite National Park by Mark
+          Tyndall
         </p>
 
         <!-- Social icons -->
         <nav class="social">
-            <a class="social__link reveal-up" href="https://github.com/mtyndall88" target="_blank" aria-label="GitHub" rel="noopener">
-                <!-- GitHub SVG -->
-                <svg viewBox="0 0 24 24" class="icon"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.55v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.53-1.36-1.3-1.72-1.3-1.72-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.22 1.79 1.22 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.2-3.07-.12-.29-.52-1.45.12-3.03 0 0 .98-.31 3.2 1.17a11.04 11.04 0 0 1 5.82 0c2.22-1.48 3.2-1.17 3.2-1.17.64 1.58.24 2.74.12 3.03.75.8 1.2 1.82 1.2 3.07 0 4.41-2.69 5.38-5.25 5.67.42.36.8 1.07.8 2.16v3.2c0 .31.2.67.8.55A11.5 11.5 0 0 0 12 .5z"/></svg>
-            </a>
-            <a class="social__link reveal-up" href="https://www.linkedin.com/in/mark-tyndall/" target="_blank" aria-label="LinkedIn" rel="noopener">
-                <!-- LinkedIn SVG -->
-                <svg viewBox="0 0 24 24" class="icon"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.67H9.37V9h3.4v1.56h.05c.47-.88 1.62-1.8 3.33-1.8 3.56 0 4.22 2.34 4.22 5.38v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.57V9h3.54v11.45z"/></svg>
-            </a>
-            <a class="social__link reveal-up" href="assets/Mark Tyndall_Resume_09232025.pdf" target="_blank" aria-label="Resume" rel="noopener">
-                <!-- File/Resume SVG -->
-                <svg viewBox="0 0 24 24" class="icon"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-            </a>
-            <a class="social__link reveal-up" href="mailto:tyndall5818@gmail.com" aria-label="Email">
-                <!-- E-Mail SVG -->
-                <svg viewBox="0 0 24 24" class="icon"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2l8 5 8-5"/></svg>
-            </a>
+          <a
+            class="social__link reveal-up"
+            href="https://github.com/mtyndall88"
+            target="_blank"
+            aria-label="GitHub"
+            rel="noopener"
+          >
+            <!-- GitHub SVG -->
+            <svg viewBox="0 0 24 24" class="icon">
+              <path
+                d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.55v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.53-1.36-1.3-1.72-1.3-1.72-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.22 1.79 1.22 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.2-3.07-.12-.29-.52-1.45.12-3.03 0 0 .98-.31 3.2 1.17a11.04 11.04 0 0 1 5.82 0c2.22-1.48 3.2-1.17 3.2-1.17.64 1.58.24 2.74.12 3.03.75.8 1.2 1.82 1.2 3.07 0 4.41-2.69 5.38-5.25 5.67.42.36.8 1.07.8 2.16v3.2c0 .31.2.67.8.55A11.5 11.5 0 0 0 12 .5z"
+              />
+            </svg>
+          </a>
+          <a
+            class="social__link reveal-up"
+            href="https://www.linkedin.com/in/mark-tyndall/"
+            target="_blank"
+            aria-label="LinkedIn"
+            rel="noopener"
+          >
+            <!-- LinkedIn SVG -->
+            <svg viewBox="0 0 24 24" class="icon">
+              <path
+                d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.67H9.37V9h3.4v1.56h.05c.47-.88 1.62-1.8 3.33-1.8 3.56 0 4.22 2.34 4.22 5.38v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.57V9h3.54v11.45z"
+              />
+            </svg>
+          </a>
+          <a
+            class="social__link reveal-up"
+            href="assets/resume/Mark Tyndall_Resume_09232025.pdf"
+            target="_blank"
+            aria-label="Resume"
+            rel="noopener"
+          >
+            <!-- File/Resume SVG -->
+            <svg viewBox="0 0 24 24" class="icon">
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8z"
+              />
+              <path d="M14 2v6h6" />
+            </svg>
+          </a>
+          <a
+            class="social__link reveal-up"
+            href="mailto:tyndall5818@gmail.com"
+            aria-label="Email"
+          >
+            <!-- E-Mail SVG -->
+            <svg viewBox="0 0 24 24" class="icon">
+              <path
+                d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2l8 5 8-5"
+              />
+            </svg>
+          </a>
         </nav>
-    </div>
-    <!-- Scroll down button -->
-    <a href="#about" class="scroll-down" aria-label="Scroll to About">
+      </div>
+      <!-- Scroll down button -->
+      <a href="#about" class="scroll-down" aria-label="Scroll to About">
         <span class="scroll-down__circle">
-            <span class="scroll-down__arrow" aria-hidden="true">↓</span>
+          <span class="scroll-down__arrow" aria-hidden="true">↓</span>
         </span>
         <span class="scroll-down__text">Scroll down</span>
-    </a>
+      </a>
+    </header>
 
-</header>
-
-<!-- About Section -->
-<section id="about" class="section section--dark">
-    <div class="container about">
+    <!-- About Section -->
+    <section id="about" class="section section--dark">
+      <div class="container about">
         <h2 class="section-title">About Me</h2>
 
         <div class="about__grid">
-            <div class="intro">
-                I’m a Marine Corps veteran and Computer Science student with a focus on building reliable, trustworthy
-                software. During my nine years of military service, I developed experience in high-pressure environments
-                that demanded precision, critical thinking, and teamwork.<br>
-                <br>
-                After transitioning out of the military, I supported Department of Defense intelligence teams by
-                integrating AI/ML technologies and user experience design into Air Force full-motion video operations.
-                My work helped analysts process complex data more efficiently, enabling faster and more informed
-                decision-making during critical missions.<br>
-                <br>
-                Now based in Southwest Florida, I’m a husband and father of two, focused on continuing to grow as a
-                developer. I’m seeking meaningful, remote-friendly opportunities where I can apply my technical skills,
-                contribute to mission-driven teams, and maintain balance with what matters most at home.<br>
-                <br>
-                Below are highlights of my technical skills:
-            </div>
+          <div class="intro">
+            I’m a Marine Corps veteran and Computer Science student with a focus
+            on building reliable, trustworthy software. During my nine years of
+            military service, I developed experience in high-pressure
+            environments that demanded precision, critical thinking, and
+            teamwork.<br />
+            <br />
+            After transitioning out of the military, I supported Department of
+            Defense intelligence teams by integrating AI/ML technologies and
+            user experience design into Air Force full-motion video operations.
+            My work helped analysts process complex data more efficiently,
+            enabling faster and more informed decision-making during critical
+            missions.<br />
+            <br />
+            Now based in Southwest Florida, I’m a husband and father of two,
+            focused on continuing to grow as a developer. I’m seeking
+            meaningful, remote-friendly opportunities where I can apply my
+            technical skills, contribute to mission-driven teams, and maintain
+            balance with what matters most at home.<br />
+            <br />
+            Below are highlights of my technical skills:
+          </div>
 
-            <!-- Circular carousel -->
-            <div class="about-carousel">
-                <div class="about-carousel__viewport">
-                    <!-- Replace src paths with your images -->
-                    <img src="assets/Headshot Gray Blue.jpeg" alt="Mark 1" class="about-carousel__img is-active">
-                    <img src="assets/Me at Big Four Ice Caves.jpg" alt="Mark 2" class="about-carousel__img">
-                    <img src="assets/Me at Lake Agnes.jpg" alt="Mark 3" class="about-carousel__img">
-                </div>
-                <div class="about-carousel__dots" aria-label="Carousel Pagination"></div>
+          <!-- Circular carousel -->
+          <div class="about-carousel">
+            <div class="about-carousel__viewport">
+              <!-- Replace src paths with your images -->
+              <img
+                src="assets/images/Headshot Gray Blue.jpeg"
+                alt="Mark 1"
+                class="about-carousel__img is-active"
+              />
+              <img
+                src="assets/images/Me at Big Four Ice Caves.jpg"
+                alt="Mark 2"
+                class="about-carousel__img"
+              />
+              <img
+                src="assets/images/Me at Lake Agnes.jpg"
+                alt="Mark 3"
+                class="about-carousel__img"
+              />
             </div>
+            <div
+              class="about-carousel__dots"
+              aria-label="Carousel Pagination"
+            ></div>
+          </div>
         </div>
 
         <!-- Skill cards -->
         <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Programming Languages</h3>
-                <p>Java, Python, JavaScript, HTML/CSS, SQL</p>
-            </div>
-            <div class="skill-card">
-                <h3>Frameworks & Libraries</h3>
-                <p>Spring Boot</p>
-            </div>
-            <div class="skill-card">
-                <h3>Tools & Technologies</h3>
-                <p>Git, Eclipse, Webstorm, PyCharm, Atom, Formspree, Jira</p>
-            </div>
-            <div class="skill-card">
-                <h3>Databases & Systems</h3>
-                <p>MySQL, MongoDB</p>
-            </div>
+          <div class="skill-card">
+            <h3>Programming Languages</h3>
+            <p>Java, PHP, JavaScript, HTML/CSS, SQL, Python (In progress)</p>
+          </div>
+          <div class="skill-card">
+            <h3>Frameworks & Libraries</h3>
+            <p>Astro, Bootstrap, Spring Boot</p>
+          </div>
+          <div class="skill-card">
+            <h3>Tools & Technologies</h3>
+            <p>
+              Git, GitHub, Docker, Docker Compose, npm, VS Code, IntelliJ,
+              Webstorm, PyCharm, Jira
+            </p>
+          </div>
+          <div class="skill-card">
+            <h3>Databases & Systems</h3>
+            <p>MySQL, phpMyAdmin</p>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Work Experience -->
-<section id="experience" class="section">
-    <div class="container">
+    <!-- Work Experience -->
+    <section id="experience" class="section">
+      <div class="container">
         <h2 class="section-title">Work Experience</h2>
 
         <div class="experience-item fade-in">
-            <div class="experience-date">January, 2023 - Present</div>
-            <div class="experience-title">Sales Associate</div>
-            <div class="experience-company">Rossman Realty</div>
-            <div class="experience-description">
-                Prepared and executed purchase/sale contracts; delivered offers, counteroffers, closing statements, and
-                deeds in compliance with state and brokerage standards. Built and sustained client relationships
-                end-to-end—from discovery through post-close—coordinating with lenders, title, and attorneys to ensure
-                accurate, on-time closings.
-            </div>
+          <div class="experience-date">January, 2023 - Present</div>
+          <div class="experience-title">Sales Associate</div>
+          <div class="experience-company">Rossman Realty</div>
+          <div class="experience-description">
+            Prepared and executed purchase/sale contracts; delivered offers,
+            counteroffers, closing statements, and deeds in compliance with
+            state and brokerage standards. Built and sustained client
+            relationships end-to-end, from discovery through post-close,
+            coordinating with lenders, title, and attorneys to ensure accurate,
+            on-time closings.
+          </div>
         </div>
 
         <div class="experience-item fade-in">
-            <div class="experience-date">December, 2018 - April, 2021</div>
-            <div class="experience-title">Field Service Representative</div>
-            <div class="experience-company">ECS Federal LLC.</div>
-            <div class="experience-description">
-                Provided client-facing technical leadership on AI/ML solutions supporting Air Force full-motion-video
-                (FMV) workflows and senior decision-makers. Led feasibility research, requirements discovery, testing,
-                and strategic assessments to translate mission needs into practical applications. Produced and presented
-                findings and recommendations to colleagues and clients within the DoD Algorithmic Warfare Cross-Functional
-                Team (Office of the Under Secretary of Defense for Intelligence & Security). Supported technical program
-                management and program development—roadmaps, risks/issues, test plans, and vendor coordination—and authored
-                executive briefings and technical summaries for both technical and public audiences. Recognized for
-                mission-focused leadership, stakeholder alignment, clear communication, analytical rigor, and disciplined
-                execution under tight timelines.
-            </div>
+          <div class="experience-date">December, 2018 - April, 2021</div>
+          <div class="experience-title">Field Service Representative</div>
+          <div class="experience-company">ECS Federal LLC.</div>
+          <div class="experience-description">
+            Provided client-facing technical leadership on AI/ML solutions
+            supporting Air Force full-motion-video (FMV) workflows and senior
+            decision-makers. Led feasibility research, requirements discovery,
+            testing, and strategic assessments to translate mission needs into
+            practical applications. Produced and presented findings and
+            recommendations to colleagues and clients within the DoD Algorithmic
+            Warfare Cross-Functional Team (Office of the Under Secretary of
+            Defense for Intelligence & Security). Supported technical program
+            management and program development roadmaps, risks/issues, test
+            plans, and vendor coordination and authored executive briefings and
+            technical summaries for both technical and public audiences.
+            Recognized for mission-focused leadership, stakeholder alignment,
+            clear communication, analytical rigor, and disciplined execution
+            under tight timelines.
+          </div>
         </div>
         <div class="experience-item fade-in">
-            <div class="experience-date">June, 2017 - December, 2018</div>
-            <div class="experience-title">Senior Consultant</div>
-            <div class="experience-company">Booz Allen Hamilton</div>
-            <div class="experience-description">
-                Led analysis of unmanned aircraft (UAS) full-motion video in support of U.S. combatant command
-                operations, producing real-time and post-mission intelligence for decision-makers. Coordinated with
-                mission customers and aircrews on threat detection and identification, set priorities under tight
-                timelines, and enforced quality standards for all products. Mentored junior analysts and streamlined
-                workflows to improve accuracy and speed. Known for calm, mission-focused leadership, clear communication,
-                analytical rigor, and sound judgment under pressure.
-            </div>
+          <div class="experience-date">June, 2017 - December, 2018</div>
+          <div class="experience-title">Senior Consultant</div>
+          <div class="experience-company">Booz Allen Hamilton</div>
+          <div class="experience-description">
+            Led analysis of unmanned aircraft (UAS) full-motion video in support
+            of U.S. combatant command operations, producing real-time and
+            post-mission intelligence for decision-makers. Coordinated with
+            mission customers and aircrews on threat detection and
+            identification, set priorities under tight timelines, and enforced
+            quality standards for all products. Mentored junior analysts and
+            streamlined workflows to improve accuracy and speed. Known for calm,
+            mission-focused leadership, clear communication, analytical rigor,
+            and sound judgment under pressure.
+          </div>
         </div>
         <div class="experience-item fade-in">
-            <div class="experience-date">March, 2013 - June, 2017</div>
-            <div class="experience-title">Imagery Analysis Specialist</div>
-            <div class="experience-company">United States Marine Corps</div>
-            <div class="experience-description">
-                Led full-motion video (FMV) analysis during live-fire training events, supervising a team of imagery
-                analysts and coordinating with training and safety staff to deliver real-time, decision-ready visuals.
-                Managed multi-sensor imagery exploitation, set priorities under pressure, and enforced rigorous quality
-                standards. Trained and mentored junior analysts, improving accuracy, speed, and reporting discipline.
-                Recognized for mission-focused leadership, clear communication, sound risk judgment, adaptability, and
-                a strong work ethic.
-            </div>
+          <div class="experience-date">March, 2013 - June, 2017</div>
+          <div class="experience-title">Imagery Analysis Specialist</div>
+          <div class="experience-company">United States Marine Corps</div>
+          <div class="experience-description">
+            Led full-motion video (FMV) analysis during live-fire training
+            events, supervising a team of imagery analysts and coordinating with
+            training and safety staff to deliver real-time, decision-ready
+            visuals. Managed multi-sensor imagery exploitation, set priorities
+            under pressure, and enforced rigorous quality standards. Trained and
+            mentored junior analysts, improving accuracy, speed, and reporting
+            discipline. Recognized for mission-focused leadership, clear
+            communication, sound risk judgment, adaptability, and a strong work
+            ethic.
+          </div>
         </div>
 
         <div class="experience-item fade-in">
-            <div class="experience-date">March, 2008 - March, 2013</div>
-            <div class="experience-title">Force Protection Specialist</div>
-            <div class="experience-company">United States Marine Corps</div>
-            <div class="experience-description">
-                Senior operations lead for a 24/7 command center, supervising a 10-person team in high-pressure,
-                time-sensitive environments. Set priorities, coached and evaluated staff, managed schedules and
-                standards, and kept the workspace safe, clean, and mission-ready. Supported security operations for
-                critical national assets—including nuclear programs, submarines, and restricted facilities—while
-                adhering to strict compliance and confidentiality. Known for steady leadership, adaptability under
-                pressure, clear communication, strong work ethic, and a focus on safety, accountability, and results.
-            </div>
+          <div class="experience-date">March, 2008 - March, 2013</div>
+          <div class="experience-title">Force Protection Specialist</div>
+          <div class="experience-company">United States Marine Corps</div>
+          <div class="experience-description">
+            Senior operations lead for a 24/7 command center, supervising a
+            10-person team in high-pressure, time-sensitive environments. Set
+            priorities, coached and evaluated staff, managed schedules and
+            standards, and kept the workspace safe, clean, and mission-ready.
+            Supported security operations for critical national assets,
+            including nuclear programs, submarines, and restricted facilities,
+            while adhering to strict compliance and confidentiality. Known for
+            steady leadership, adaptability under pressure, clear communication,
+            strong work ethic, and a focus on safety, accountability, and
+            results.
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Education -->
-<section id="education" class="section">
-    <div class="container">
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
         <h2 class="section-title">Education</h2>
 
         <div class="experience-item fade-in">
-            <div class="experience-date">March 2025 - Expected Graduation September 2026</div>
-            <div class="experience-title">Bachelor of Science, Computer Science</div>
-            <div class="experience-company">Rasmussen University</div>
-            <div class="experience-description">GPA: 4.0.</div>
+          <div class="experience-date">
+            March 2025 - Expected Graduation September 2026
+          </div>
+          <div class="experience-title">
+            Bachelor of Science, Computer Science
+          </div>
+          <div class="experience-company">Rasmussen University</div>
+          <div class="experience-description">GPA: 4.0.</div>
         </div>
 
         <div class="experience-item fade-in">
-            <div class="experience-date">January 2019 - April 2020</div>
-            <div class="experience-title">Bachelor of Arts, Business Management</div>
-            <div class="experience-company">Golden Gate University</div>
-            <div class="experience-description">GPA: 3.2</div>
+          <div class="experience-date">January 2019 - April 2020</div>
+          <div class="experience-title">
+            Bachelor of Arts, Business Management
+          </div>
+          <div class="experience-company">Golden Gate University</div>
+          <div class="experience-description">GPA: 3.2</div>
         </div>
 
         <div class="experience-item fade-in">
-            <div class="experience-date">March 2012 - November 2018</div>
-            <div class="experience-title">Associate of Arts, General Studies</div>
-            <div class="experience-company">American Military University</div>
-            <div class="experience-description">GPA: 3.6</div>
+          <div class="experience-date">March 2012 - November 2018</div>
+          <div class="experience-title">Associate of Arts, General Studies</div>
+          <div class="experience-company">American Military University</div>
+          <div class="experience-description">GPA: 3.6</div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Projects Section -->
-<section id="projects" class="section section--dark">
-    <div class="container">
+    <!-- Projects Section -->
+    <section id="projects" class="section section--dark">
+      <div class="container">
         <h2 class="section-title">Projects</h2>
 
         <div class="projects-grid projects-grid--gallery">
-            <!-- Project 1: Personal Website -->
-            <article class="project-card project" data-project='{
+          <!-- Project 1: Personal Website -->
+          <article
+            class="project-card project"
+            data-project='{
         "title":"Personal Portfolio Website",
         "img":"assets/projects/Personal-Site-Hero.jpg",
         "stack":["HTML","CSS","JavaScript"],
@@ -255,138 +352,277 @@
         "links":[
           {"label":"GitHub","href":"https://github.com/mtyndall88/mtyndall88.github.io"},
           {"label":"Live Demo","href":"https://mtyndall88.github.io/"}
-        ]}'>
-                <button class="project-thumb" aria-label="Open: Personal Portfolio Website">
-                    <img src="assets/projects/Personal-Site-Thumb-New.jpg" alt="Personal Portfolio Website thumbnail">
-                    <span class="project-thumb__overlay">
-            <span class="project-thumb__title">Personal Portfolio Website</span>
-          </span>
-                </button>
-            </article>
+        ]}'
+          >
+            <button
+              class="project-thumb"
+              aria-label="Open: Personal Portfolio Website"
+            >
+              <img
+                src="assets/projects/Personal-Site-Thumb-New.jpg"
+                alt="Personal Portfolio Website thumbnail"
+              />
+              <span class="project-thumb__overlay">
+                <span class="project-thumb__title"
+                  >Personal Portfolio Website</span
+                >
+              </span>
+            </button>
+          </article>
 
-            <!-- Project 2 Inventory Management System -->
-            <article class="project-card project" data-project='{
+          <!-- Project 2 Inventory Management System -->
+          <article
+            class="project-card project"
+            data-project='{
         "title":"Inventory Management System",
         "img":"assets/projects/InventoryControlGUI-Mockup.jpg",
         "stack":["Java","MySQL","Git"],
-        "desc":"I developed a Java Swing Inventory Management System for small HVAC teams with a Java front-end and MySQL back-end for my Advanced Java Programming course. The system supports product tracking, role-based access control, stock adjustments, and reporting",
+        "desc":"I developed a Java Swing Inventory Management System for small HVAC teams with a Java front-end and MySQL back-end for my Advanced Java Programming course. The system supports product tracking, role-based access control, stock adjustments, and reporting.",
         "links":[
           {"label":"GitHub","href":"https://github.com/mtyndall88/ReferralOnlyHVAC-InventoryControl"}
-        ]}'>
-                <!-- Optional Live Demo Link {"label":"Live Demo","href":"https://data-project.example.com"} -->
+        ]}'
+          >
+            <!-- Optional Live Demo Link {"label":"Live Demo","href":"https://data-project.example.com"} -->
 
-                <button class="project-thumb" aria-label="Open: Inventory Management System">
-                    <img src="assets/projects/InventoryControlGUI-Mockup-Thumb.jpg" alt="HVAC Inventory thumbnail">
-                    <span class="project-thumb__overlay">
-            <span class="project-thumb__title">Inventory Management System</span>
-          </span>
-                </button>
-            </article>
+            <button
+              class="project-thumb"
+              aria-label="Open: Inventory Management System"
+            >
+              <img
+                src="assets/projects/InventoryControlGUI-Mockup-Thumb.jpg"
+                alt="HVAC Inventory thumbnail"
+              />
+              <span class="project-thumb__overlay">
+                <span class="project-thumb__title"
+                  >Inventory Management System</span
+                >
+              </span>
+            </button>
+          </article>
+
+          <!-- Project 3: Gulf Coast HVAC Marketing Website -->
+          <article
+            class="project-card project"
+            data-project='{
+                "title":"Gulf Coast HVAC Marketing Website",
+                "img":"assets/projects/Gulf-Coast-HVAC-Marketing.jpg",
+                "stack":["Astro","HTML","CSS","JavaScript","Responsive Design"],
+                "desc":"I built a responsive Astro marketing website for a fictional HVAC company focused on service visibility, customer trust, and lead generation. The project includes reusable components, organized pages, responsive layouts, and a clean business-focused design.",
+                "links":[
+                {"label":"GitHub","href":"https://github.com/mtyndall88/gulf-coast-hvac-marketing-website"}
+                ]}'
+          >
+            <button
+              class="project-thumb"
+              aria-label="Open: Gulf Coast HVAC Marketing Website"
+            >
+              <img
+                src="assets/projects/Gulf-Coast-HVAC-Marketing-Thumb.jpg"
+                alt="Gulf Coast HVAC Marketing Website thumbnail"
+              />
+              <span class="project-thumb__overlay">
+                <span class="project-thumb__title">
+                  Gulf Coast HVAC Marketing Website
+                </span>
+              </span>
+            </button>
+          </article>
+
+          <!-- Project 4: Gulf Coast HVAC E-Commerce Store -->
+          <article
+            class="project-card project"
+            data-project='{
+                    "title":"Gulf Coast HVAC E-Commerce Store",
+                    "img":"assets/projects/Gulf-Coast-HVAC-Store.jpg",
+                    "stack":["PHP","MySQL","Docker","Bootstrap","phpMyAdmin","HTML","CSS"],
+                    "desc":"I developed a full-stack HVAC e-commerce web application using PHP, MySQL, Bootstrap, and Docker. The application includes customer registration, login functionality, product listings, a shopping cart, checkout flow, reusable page components, and a privacy policy page.",
+                    "links":[
+                    {"label":"GitHub","href":"https://github.com/mtyndall88/gulf-coast-hvac-store"}
+                    ]}'
+          >
+            <button
+              class="project-thumb"
+              aria-label="Open: Gulf Coast HVAC E-Commerce Store"
+            >
+              <img
+                src="assets/projects/Gulf-Coast-HVAC-Store-Thumb.jpg"
+                alt="Gulf Coast HVAC E-Commerce Store thumbnail"
+              />
+              <span class="project-thumb__overlay">
+                <span class="project-thumb__title">
+                  Gulf Coast HVAC E-Commerce Store
+                </span>
+              </span>
+            </button>
+          </article>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Modal (reused for all projects) -->
-<div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="project-modal__backdrop" data-close></div>
-    <div class="project-modal__dialog" role="document">
-        <button class="project-modal__close" aria-label="Close project" data-close>&times;</button>
+    <!-- Modal (reused for all projects) -->
+    <div
+      class="project-modal"
+      id="projectModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="project-modal__backdrop" data-close></div>
+      <div class="project-modal__dialog" role="document">
+        <button
+          class="project-modal__close"
+          aria-label="Close project"
+          data-close
+        >
+          &times;
+        </button>
         <div class="project-modal__media">
-            <img id="projectModalImg" src="" alt="">
+          <img id="projectModalImg" src="" alt="" />
         </div>
         <div class="project-modal__content">
-            <h3 id="projectModalTitle"></h3>
-            <p id="projectModalDesc" class="project-modal__desc"></p>
-            <div id="projectModalStack" class="project-modal__stack"></div>
-            <div id="projectModalLinks" class="project-modal__links"></div>
+          <h3 id="projectModalTitle"></h3>
+          <p id="projectModalDesc" class="project-modal__desc"></p>
+          <div id="projectModalStack" class="project-modal__stack"></div>
+          <div id="projectModalLinks" class="project-modal__links"></div>
         </div>
+      </div>
     </div>
-</div>
 
-
-<!-- Hobbies and Interests Section -->
-<section id="hobbies" class="section section--fullbleed">
-    <div class="container">
+    <!-- Hobbies and Interests Section -->
+    <section id="hobbies" class="section section--fullbleed">
+      <div class="container">
         <h2 class="section-title">Hobbies & Interests</h2>
-        <p class="intro">When I am not coding, I love spending time with my family or outdoors. I enjoy
-            unhurried time with my girls, getting out on the water to boat and fish along the SWFL coast, and exploring
-            new places—nearby or far-off destinations. These moments away from the screen keep me grounded and curious,
-            and that curiosity inspires how I approach my projects.</p>
-    </div>
-    <!-- Full-bleed gallery lives OUTSIDE the container to span edge-to-edge -->
-    <div class="hobby-gallery">
+        <p class="intro">
+          When I am not coding, I love spending time with my family or outdoors.
+          I enjoy unhurried time with my girls, getting out on the water to boat
+          and fish along the SWFL coast, and exploring new places—nearby or
+          far-off destinations. These moments away from the screen keep me
+          grounded and curious, and that curiosity inspires how I approach my
+          projects.
+        </p>
+      </div>
+      <!-- Full-bleed gallery lives OUTSIDE the container to span edge-to-edge -->
+      <div class="hobby-gallery">
         <figure class="hobby-tile">
-            <img src="assets/hobbies/Fishing Sunrise.jpeg" alt="Boating and Fishing" loading="lazy">
+          <img
+            src="assets/hobbies/Fishing Sunrise.jpeg"
+            alt="Boating and Fishing"
+            loading="lazy"
+          />
         </figure>
         <figure class="hobby-tile">
-            <img src="assets/hobbies/Family in Montana.jpeg" alt="My Family" loading="lazy">
+          <img
+            src="assets/hobbies/Family in Montana.jpeg"
+            alt="My Family"
+            loading="lazy"
+          />
         </figure>
         <figure class="hobby-tile">
-            <img src="assets/hobbies/Me_Brookings.jpg" alt="Exploring and Traveling" loading="lazy">
+          <img
+            src="assets/hobbies/Me_Brookings.jpg"
+            alt="Exploring and Traveling"
+            loading="lazy"
+          />
         </figure>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="container">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
         <h2 class="section-title">Contact</h2>
-        <p class="contact-intro">For employment inquiries or prospective projects, please contact me to discuss how I can help.</p>
+        <p class="contact-intro">
+          For employment inquiries or prospective projects, please contact me to
+          discuss how I can help.
+        </p>
 
-        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mzzjbnrd" method="POST" data-captcha="true">
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="firstName">First Name *</label>
-                    <input type="text" id="firstName" name="firstName" required />
-                </div>
-                <div class="form-group">
-                    <label for="lastName">Last Name *</label>
-                    <input type="text" id="lastName" name="lastName" required />
-                </div>
-            </div>
-
+        <form
+          class="contact-form"
+          id="contactForm"
+          action="https://formspree.io/f/mzzjbnrd"
+          method="POST"
+          data-captcha="true"
+        >
+          <div class="form-row">
             <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" required />
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required />
             </div>
-
             <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="What would you like to discuss?" />
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required />
             </div>
+          </div>
 
-            <div class="form-group">
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" required placeholder="Tell me about yourself and how I can help you..."></textarea>
-            </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
 
-            <!-- Honeypot to reduce spam -->
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="What would you like to discuss?"
+            />
+          </div>
 
-            <!-- Custom subject seen in the email you receive -->
-            <input type="hidden" name="_subject" value="New message from portfolio contact form" />
-            <input type="hidden" name="_website" value="mtyndall88.github.io">
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="Tell me about yourself and how I can help you..."
+            ></textarea>
+          </div>
 
-            <button type="submit" class="submit-btn">Send Message</button>
+          <!-- Honeypot to reduce spam -->
+          <input
+            type="text"
+            name="_gotcha"
+            style="display: none"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
+          <!-- Custom subject seen in the email you receive -->
+          <input
+            type="hidden"
+            name="_subject"
+            value="New message from portfolio contact form"
+          />
+          <input type="hidden" name="_website" value="mtyndall88.github.io" />
+
+          <button type="submit" class="submit-btn">Send Message</button>
         </form>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Back to top button -->
-<button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
-    <span class="back-to-top__arrow">↑</span>
-</button>
+    <!-- Back to top button -->
+    <button
+      id="backToTop"
+      class="back-to-top"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      <span class="back-to-top__arrow">↑</span>
+    </button>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
         <div class="footer-contact">
-            <p>Cape Coral, FL</p>
-            <p><a href="mailto:tyndall5818@gmail.com">tyndall5818@gmail.com</a></p>
-            <p><a href="tel:+12392333349">+1 (239) 233-3349</a></p>
+          <p>Cape Coral, FL</p>
+          <p>
+            <a href="mailto:tyndall5818@gmail.com">tyndall5818@gmail.com</a>
+          </p>
+          <p><a href="tel:+12392333349">+1 (239) 233-3349</a></p>
         </div>
-        <p>&copy; 2025 Mark Tyndall. All rights reserved.</p>
-    </div>
-</footer>
-</body>
+        <p>&copy; 2026 Mark Tyndall. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>

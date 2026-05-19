@@ -8,6 +8,7 @@ This project showcases who I am, my work experience, education, technical skills
 ---
 
 ## ✨ Features
+
 - Topbar slide-in animation on load
 - Hero text reveal after background is visible
 - Smooth in-page navigation with correct topbar offset
@@ -21,12 +22,14 @@ This project showcases who I am, my work experience, education, technical skills
 ---
 
 ## 🛠 Tech Stack
+
 - **Languages:** HTML5, CSS3, JavaScript (Vanilla)
 - **Tools/Services:** Formspree (contact form), GitHub Pages (hosting)
 
 ---
 
 ## 📸 Preview
+
 <p align="center">
   <img src="assets/projects/Personal-Site-Hero.jpg" alt="Portfolio Hero Screenshot" width="900">
 </p>
@@ -43,6 +46,7 @@ cd mtyndall88.github.io
 python -m http.server 5500
 # open http://localhost:5500/
 ```
+
 You can also just open index.html in a browser.
 
 ---
@@ -58,4 +62,4 @@ You can also just open index.html in a browser.
 ## 📄 License
 
 Code is licensed under the [MIT License](LICENSE).  
-Content (text, images, resume, etc.) is © 2025 Mark Tyndall. All rights reserved.
+Content (text, images, resume, etc.) is © 2026 Mark Tyndall. All rights reserved.

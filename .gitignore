@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# JetBrains IDE files
+.idea/
+
+# VS Code settings
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
