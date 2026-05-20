@@ -59,6 +59,12 @@ You can also just open index.html in a browser.
 
 ---
 
+## Author
+
+Mark Tyndall
+
+---
+
 ## 📄 License
 
 Code is licensed under the [MIT License](LICENSE).  
