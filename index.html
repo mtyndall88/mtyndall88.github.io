@@ -3,14 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mark Tyndall</title>
+    <title>Mark Tyndall | Software Developer &amp; USMC Veteran</title>
+    <meta
+      name="description"
+      content="Software developer and U.S. Marine Corps veteran with a DoD TS/SCI clearance. Founder of TrueHull LLC. Open to full-time remote software developer roles."
+    />
+    <meta name="author" content="Mark Tyndall" />
+    <link rel="canonical" href="https://mtyndall88.github.io/" />
+    <meta name="theme-color" content="#121214" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mtyndall88.github.io/" />
+    <meta
+      property="og:title"
+      content="Mark Tyndall | Software Developer & USMC Veteran"
+    />
+    <meta
+      property="og:description"
+      content="Software developer and U.S. Marine Corps veteran. Founder of TrueHull LLC. Open to full-time remote roles."
+    />
+    <meta
+      property="og:image"
+      content="https://mtyndall88.github.io/assets/projects/Personal-Site-Hero.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Mark Tyndall | Software Developer & USMC Veteran"
+    />
+    <meta
+      name="twitter:description"
+      content="Software developer and U.S. Marine Corps veteran. Founder of TrueHull LLC. Open to full-time remote roles."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mtyndall88.github.io/assets/projects/Personal-Site-Hero.jpg"
+    />
 
     <!-- Stylesheet and JS -->
-    <link rel="stylesheet" href="css/styles.css?v=20250922" />
+    <link rel="stylesheet" href="css/styles.css?v=20260813" />
     <script src="js/index.js?v=20250922" defer></script>
 
-    <!-- Standard favicon -->
+    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mark Tyndall",
+        "jobTitle": "Software Developer",
+        "url": "https://mtyndall88.github.io/",
+        "sameAs": [
+          "https://github.com/mtyndall88",
+          "https://www.linkedin.com/in/mark-tyndall/"
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- Fixed overlay: NAV + Greeting (two stacked rows) -->
@@ -31,9 +87,9 @@
 
       <div class="greeting" id="greeting">
         <span class="greeting__text">
-          Hello, thank you for visiting my Website! I am currently seeking
-          internship opportunities in software development. If you think I'm a
-          good fit, please send me an
+          Hello, thank you for visiting my Website! I am currently seeking a
+          full-time remote software developer role. If you think I'm a good fit,
+          please send me an
           <a class="email-link" href="mailto:tyndall5818@gmail.com">email</a>.
         </span>
         <button
@@ -53,8 +109,8 @@
       <div class="container hero__content">
         <h1 class="reveal-up">Mark Tyndall</h1>
         <p class="tagline reveal-up">
-          U.S. Marine Corps Veteran | DoD TS/SCI Security Clearance | CS
-          Student<br />
+          U.S. Marine Corps Veteran | DoD TS/SCI Security Clearance | Software
+          Developer<br />
           Background Image: Glacier Point, Yosemite National Park by Mark
           Tyndall
         </p>
@@ -91,7 +147,7 @@
           </a>
           <a
             class="social__link reveal-up"
-            href="assets/resume/Mark Tyndall_Resume_09232025.pdf"
+            href="assets/resume/Mark-Tyndall-Resume-2026.pdf"
             target="_blank"
             aria-label="Resume"
             rel="noopener"
@@ -134,8 +190,8 @@
 
         <div class="about__grid">
           <div class="intro">
-            I’m a Marine Corps veteran and Computer Science student with a focus
-            on building reliable, trustworthy software. During my nine years of
+            I’m a Marine Corps veteran and software developer with a focus on
+            building reliable, trustworthy software. During my nine years of
             military service, I developed experience in high-pressure
             environments that demanded precision, critical thinking, and
             teamwork.<br />
@@ -147,9 +203,18 @@
             enabling faster and more informed decision-making during critical
             missions.<br />
             <br />
+            In 2026 I founded TrueHull, a boat buyer risk intelligence platform
+            that helps buyers know the risk before they buy. I built it end to
+            end with Node.js, Express, and MySQL, and I develop with agentic AI
+            workflows as a core part of my process — more than 400 of the
+            roughly 590 commits were built with Claude Code. I also used the
+            Anthropic Claude API to label and independently audit a 1,500-note
+            dataset that measures and tunes the platform’s rule-based risk
+            engine.<br />
+            <br />
             Now based in Southwest Florida, I’m a husband and father of two,
-            focused on continuing to grow as a developer. I’m seeking
-            meaningful, remote-friendly opportunities where I can apply my
+            focused on continuing to grow as a developer. I’m seeking a
+            full-time remote software developer role where I can apply my
             technical skills, contribute to mission-driven teams, and maintain
             balance with what matters most at home.<br />
             <br />
@@ -186,23 +251,30 @@
         <!-- Skill cards -->
         <div class="skills-grid">
           <div class="skill-card">
-            <h3>Programming Languages</h3>
-            <p>Java, PHP, JavaScript, HTML/CSS, SQL, Python (In progress)</p>
-          </div>
-          <div class="skill-card">
-            <h3>Frameworks & Libraries</h3>
-            <p>Astro, Bootstrap, Spring Boot</p>
-          </div>
-          <div class="skill-card">
-            <h3>Tools & Technologies</h3>
+            <h3>AI &amp; LLM Development</h3>
             <p>
-              Git, GitHub, Docker, Docker Compose, npm, VS Code, IntelliJ,
-              Webstorm, PyCharm, Jira
+              Claude Code, Agentic AI Workflows, Anthropic Claude API, OpenAI
+              ChatGPT &amp; Codex, LLM Data Labeling &amp; Evaluation, Prompt
+              Engineering
             </p>
           </div>
           <div class="skill-card">
-            <h3>Databases & Systems</h3>
-            <p>MySQL, phpMyAdmin</p>
+            <h3>Programming Languages</h3>
+            <p>Java, JavaScript, SQL, Python, PHP, HTML/CSS</p>
+          </div>
+          <div class="skill-card">
+            <h3>Frameworks &amp; Databases</h3>
+            <p>
+              Node.js, Express, REST APIs, Spring Boot, Astro, Bootstrap, MySQL,
+              JDBC, phpMyAdmin
+            </p>
+          </div>
+          <div class="skill-card">
+            <h3>Cloud, DevOps &amp; Tools</h3>
+            <p>
+              Docker, Docker Compose, DigitalOcean, CI/CD (GitHub Actions), Git,
+              GitHub, npm, VS Code, IntelliJ, Jira
+            </p>
           </div>
         </div>
       </div>
@@ -212,6 +284,29 @@
     <section id="experience" class="section">
       <div class="container">
         <h2 class="section-title">Work Experience</h2>
+
+        <div class="experience-item fade-in">
+          <div class="experience-date">May, 2026 - Present</div>
+          <div class="experience-title">Founder &amp; Software Developer</div>
+          <div class="experience-company">TrueHull LLC</div>
+          <div class="experience-description">
+            Founded and built TrueHull (gettruehull.com), a boat buyer risk
+            intelligence platform, end to end as the sole developer. The stack
+            is a Node.js/Express REST API on a normalized MySQL schema with JWT
+            and scrypt authentication, email verification, and Stripe Checkout
+            with webhook signature verification and an idempotent credit/voucher
+            ledger. Data pipelines ingest NOAA/NHC storm-track, U.S. Census, and
+            USCG data to power a rule-based 0-100 risk-scoring and storm-exposure
+            engine with guidance across all 50 states and DC. Containerized with
+            Docker and deployed to DigitalOcean App Platform with GitHub Actions
+            CI/CD, health checks, and automated nightly backups, backed by a
+            993-test suite and an adversarial claims-audit process. I develop
+            with agentic AI workflows using Claude Code across the majority of
+            590+ commits, and built an LLM data-labeling pipeline on the
+            Anthropic Claude Batch API that independently audited a 1,500-note
+            dataset to measure and tune the risk engine.
+          </div>
+        </div>
 
         <div class="experience-item fade-in">
           <div class="experience-date">January, 2023 - Present</div>
@@ -232,20 +327,19 @@
           <div class="experience-title">Field Service Representative</div>
           <div class="experience-company">ECS Federal LLC.</div>
           <div class="experience-description">
-            Provided client-facing technical leadership on AI/ML solutions
-            supporting Air Force full-motion-video (FMV) workflows and senior
-            decision-makers. Led feasibility research, requirements discovery,
-            testing, and strategic assessments to translate mission needs into
-            practical applications. Produced and presented findings and
-            recommendations to colleagues and clients within the DoD Algorithmic
-            Warfare Cross-Functional Team (Office of the Under Secretary of
-            Defense for Intelligence & Security). Supported technical program
-            management and program development roadmaps, risks/issues, test
-            plans, and vendor coordination and authored executive briefings and
-            technical summaries for both technical and public audiences.
-            Recognized for mission-focused leadership, stakeholder alignment,
-            clear communication, analytical rigor, and disciplined execution
-            under tight timelines.
+            Served as on-site technical lead integrating the Palantir Maven
+            Smart System, an AI/ML intelligence platform, into 24/7 classified
+            Air Force full-motion-video (FMV) operations. Acted as the primary
+            technical liaison between operational analysts, government
+            stakeholders, and the software engineering teams building the
+            platform: tested software, reproduced and documented defects, and
+            fed bug reports and feature requests into the engineering backlog.
+            Designed and delivered a two-week training course on the platform’s
+            Wide-Area Motion Imagery capability, and evaluated emerging AI/ML and
+            computer-vision technologies, briefing findings to senior defense
+            leadership including the OUSD(I) Algorithmic Warfare Cross-Functional
+            Team (Project Maven). Provided Tier 1/Tier 2 support and supported
+            secure configuration, patching, and version control.
           </div>
         </div>
         <div class="experience-item fade-in">
@@ -341,7 +435,32 @@
         <h2 class="section-title">Projects</h2>
 
         <div class="projects-grid projects-grid--gallery">
-          <!-- Project 1: Personal Website -->
+          <!-- Project 1: TrueHull -->
+          <article
+            class="project-card project"
+            data-project='{
+        "title":"TrueHull - Boat Buyer Risk Intelligence Platform",
+        "img":"assets/projects/TrueHull-Landing.jpg",
+        "stack":["Node.js","Express","MySQL","REST API","Stripe","Docker","DigitalOcean","CI/CD","Anthropic Claude API"],
+        "desc":"TrueHull is a pre-purchase due-diligence tool for boat buyers: paste a listing and get an organized risk report with a rule-based 0-100 score, regional storm-exposure history, and the official records to pull and questions to ask before money changes hands. I designed, built, and deployed the entire product solo — the tech is summarized below, and the live site shows it in action.",
+        "links":[
+          {"label":"Live Site","href":"https://gettruehull.com"}
+        ]}'
+          >
+            <button class="project-thumb" aria-label="Open: TrueHull">
+              <img
+                src="assets/projects/TrueHull-Landing-Thumb.jpg"
+                alt="TrueHull landing page thumbnail"
+              />
+              <span class="project-thumb__overlay">
+                <span class="project-thumb__title"
+                  >TrueHull - Boat Buyer Risk Intelligence</span
+                >
+              </span>
+            </button>
+          </article>
+
+          <!-- Project 2: Personal Website -->
           <article
             class="project-card project"
             data-project='{
@@ -370,7 +489,7 @@
             </button>
           </article>
 
-          <!-- Project 2 Inventory Management System -->
+          <!-- Project 3: Inventory Management System -->
           <article
             class="project-card project"
             data-project='{
@@ -400,7 +519,7 @@
             </button>
           </article>
 
-          <!-- Project 3: Gulf Coast HVAC Marketing Website -->
+          <!-- Project 4: Gulf Coast HVAC Marketing Website -->
           <article
             class="project-card project"
             data-project='{
@@ -428,7 +547,7 @@
             </button>
           </article>
 
-          <!-- Project 4: Gulf Coast HVAC E-Commerce Store -->
+          <!-- Project 5: Gulf Coast HVAC E-Commerce Store -->
           <article
             class="project-card project"
             data-project='{
